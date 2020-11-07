@@ -3,7 +3,7 @@ package com.api.concessionnaire.model;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data

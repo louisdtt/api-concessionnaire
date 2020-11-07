@@ -14,4 +14,11 @@ public class Concessionnaire {
     private String name;
     @ManyToOne
     private Adresse adresse;
+    @ManyToMany
+    @JoinTable(
+            name = "marque_concessionnaire",
+            joinColumns = @JoinColumn(name = "marque_id"),
+            inverseJoinColumns = @JoinColumn(name = "concessionnaire_id")
+    )
+    Set<Marque> marques;
 }

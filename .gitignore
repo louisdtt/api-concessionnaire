@@ -26,6 +26,8 @@ hs_err_pid*
 .idea
 
 #Spring Boot
-target
 concessionnaire.iml
+
+#Target SQL
+target/classes/data.sql
 
