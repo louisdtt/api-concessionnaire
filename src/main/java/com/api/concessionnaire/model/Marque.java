@@ -13,12 +13,11 @@ import java.util.Set;
 public class Marque {
 
     @Id
-    private int _id;
-    private String _name;
+    private int id;
+    private String name;
     @ManyToOne
-    private Voiture _voiture;
+    private Voiture voiture;
     @ManyToOne
-    private Client _client;
-    @ManyToMany(mappedBy = "_marques")
-    Set<Concessionnaire> _concessionnaires;
+    private Client client;
+
 }

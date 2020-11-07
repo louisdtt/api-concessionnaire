@@ -10,49 +10,49 @@ import javax.persistence.Id;
 public class Adresse {
 
     @Id
-    private int _id;
-    private int _numRue;
-    private String _rue;
-    private int _codePostal;
-    private String _ville;
+    private int id;
+    private int numRue;
+    private String rue;
+    private int codePostal;
+    private String ville;
 
     public int getId() {
-        return _id;
+        return id;
     }
 
     public void setId(int _id) {
-        this._id = _id;
+        this.id = _id;
     }
 
     public int getNumRue() {
-        return _numRue;
+        return numRue;
     }
 
     public void setNumRue(int _numRue) {
-        this._numRue = _numRue;
+        this.numRue = _numRue;
     }
 
     public String getRue() {
-        return _rue;
+        return rue;
     }
 
     public void setRue(String _rue) {
-        this._rue = _rue;
+        this.rue = _rue;
     }
 
     public int getCodePostal() {
-        return _codePostal;
+        return codePostal;
     }
 
     public void setCodePostal(int _codePostal) {
-        this._codePostal = _codePostal;
+        this.codePostal = _codePostal;
     }
 
     public String getVille() {
-        return _ville;
+        return ville;
     }
 
     public void setVille(String _ville) {
-        this._ville = _ville;
+        this.ville = _ville;
     }
 }

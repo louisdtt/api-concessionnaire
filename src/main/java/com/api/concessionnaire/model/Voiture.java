@@ -10,6 +10,6 @@ import javax.persistence.Id;
 public class Voiture {
 
     @Id
-    private int _id;
-    private String _name;
+    private int id;
+    private String name;
 }

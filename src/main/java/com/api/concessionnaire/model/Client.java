@@ -11,6 +11,6 @@ import javax.persistence.ManyToMany;
 public class Client {
 
     @Id
-    private int _id;
-    private String _name;
+    private int id;
+    private String name;
 }

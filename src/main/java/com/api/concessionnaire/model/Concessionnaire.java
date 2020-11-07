@@ -10,15 +10,8 @@ import java.util.Set;
 public class Concessionnaire {
 
     @Id
-    private int _id;
-    private String _name;
+    private int id;
+    private String name;
     @ManyToOne
-    private Adresse _adresse;
-    @ManyToMany
-    @JoinTable(
-            name = "marque_concessionnaire",
-            joinColumns = @JoinColumn(name = "marque_id"),
-            inverseJoinColumns = @JoinColumn(name = "concessionnaire_id")
-    )
-    Set<Marque> marques;
+    private Adresse adresse;
 }
