@@ -16,4 +16,28 @@ public class Marque {
     @OneToMany
     @JoinColumn(name = "marque_id")
     private Set<Voiture> voitures = new HashSet<Voiture>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Voiture> getVoitures() {
+        return voitures;
+    }
+
+    public void setVoitures(Set<Voiture> voitures) {
+        this.voitures = voitures;
+    }
 }
