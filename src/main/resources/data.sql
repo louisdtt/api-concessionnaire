@@ -22,16 +22,16 @@ INSERT INTO marque VALUES (5,'Audi');
 
 -- Table voiture
 
-INSERT INTO voiture VALUES (1,'208',1,3);
-INSERT INTO voiture VALUES (2,'308',1,2);
-INSERT INTO voiture VALUES (3,'Kangoo',2,7);
-INSERT INTO voiture VALUES (4,'Captur',2,1);
-INSERT INTO voiture VALUES (5,'944',3,4);
-INSERT INTO voiture VALUES (6,'Macan',3,5);
-INSERT INTO voiture VALUES (7,'C1',4,9);
-INSERT INTO voiture VALUES (8,'C3',4,6);
-INSERT INTO voiture VALUES (9,'A1',5,8);
-INSERT INTO voiture VALUES (10,'A2',5,10);
+INSERT INTO voiture VALUES (1,'208',3,1);
+INSERT INTO voiture VALUES (2,'308',2,1);
+INSERT INTO voiture VALUES (3,'Kangoo',7,2);
+INSERT INTO voiture VALUES (4,'Captur',1,2);
+INSERT INTO voiture VALUES (5,'944',4,3);
+INSERT INTO voiture VALUES (6,'Macan',5,3);
+INSERT INTO voiture VALUES (7,'C1',9,4);
+INSERT INTO voiture VALUES (8,'C3',6,4);
+INSERT INTO voiture VALUES (9,'A1',8,5);
+INSERT INTO voiture VALUES (10,'A2',10,5);
 
 
 -- Table adresse

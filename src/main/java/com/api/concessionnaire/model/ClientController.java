@@ -46,7 +46,6 @@ public class ClientController {
     public Client updateClient(@RequestBody Client newClient, @PathVariable("clientId") int id) {
         return clientRepository.findById(id).map(client -> {
             client.setName(newClient.getName());
-            client.setVoitures(newClient.getVoitures());
             return clientRepository.save(client);
         }).orElseGet(() -> {
             newClient.setId(id);

@@ -46,6 +46,8 @@ public class VoitureController {
     public Voiture updateVoiture(@RequestBody Voiture newVoiture, @PathVariable("voitureId") int id) {
         return voitureRepository.findById(id).map(voiture -> {
             voiture.setName(newVoiture.getName());
+            voiture.setMarque(newVoiture.getMarque());
+            voiture.setClient(newVoiture.getClient());
             return voitureRepository.save(voiture);
         }).orElseGet(() -> {
             newVoiture.setId(id);

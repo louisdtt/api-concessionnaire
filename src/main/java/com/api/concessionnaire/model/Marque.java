@@ -13,9 +13,6 @@ public class Marque {
     @Id
     private int id;
     private String name;
-    @OneToMany
-    @JoinColumn(name = "marque_id")
-    private Set<Voiture> voitures = new HashSet<Voiture>();
 
     public int getId() {
         return id;
@@ -31,13 +28,5 @@ public class Marque {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Set<Voiture> getVoitures() {
-        return voitures;
-    }
-
-    public void setVoitures(Set<Voiture> voitures) {
-        this.voitures = voitures;
     }
 }
