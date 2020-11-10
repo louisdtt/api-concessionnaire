@@ -33,7 +33,7 @@ public class MarqueController {
 
     @PostMapping
     public void createMarque(@RequestBody Marque newMarque) throws AlreadyExistingException {
-        final Optional<Marque> optionalMarque = marqueRepository.findAll().stream().filter(Marque -> Marque.getId() == newMarque.getId()).findFirst();
+        final Optional<Marque> optionalMarque = marqueRepository.findById(newMarque.getId());
 
         if (optionalMarque.isPresent()) {
             throw new AlreadyExistingException("Marque " + newMarque.getId() + " already exists.");

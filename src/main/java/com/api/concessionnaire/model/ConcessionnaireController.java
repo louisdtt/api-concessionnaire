@@ -33,7 +33,7 @@ public class ConcessionnaireController {
 
     @PostMapping
     public void createConcessionnaire(@RequestBody Concessionnaire newConcessionnaire) throws AlreadyExistingException {
-        final Optional<Concessionnaire> optionalConcessionnaire = concessionnaireRepository.findAll().stream().filter(Concessionnaire -> Concessionnaire.getId() == newConcessionnaire.getId()).findFirst();
+        final Optional<Concessionnaire> optionalConcessionnaire = concessionnaireRepository.findById(newConcessionnaire.getId());
 
         if (optionalConcessionnaire.isPresent()) {
             throw new AlreadyExistingException("Concessionnaire " + newConcessionnaire.getId() + " already exists.");

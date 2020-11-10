@@ -33,7 +33,7 @@ public class ClientController {
 
     @PostMapping
     public void createClient(@RequestBody Client newClient) throws AlreadyExistingException {
-        final Optional<Client> optionalClient = clientRepository.findAll().stream().filter(Client -> Client.getId() == newClient.getId()).findFirst();
+        final Optional<Client> optionalClient = clientRepository.findById(newClient.getId());
 
         if (optionalClient.isPresent()) {
             throw new AlreadyExistingException("Client " + newClient.getId() + " already exists.");

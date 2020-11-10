@@ -33,7 +33,7 @@ public class VoitureController {
 
     @PostMapping
     public void createVoiture(@RequestBody Voiture newVoiture) throws AlreadyExistingException {
-        final Optional<Voiture> optionalVoiture = voitureRepository.findAll().stream().filter(Voiture -> Voiture.getId() == newVoiture.getId()).findFirst();
+        final Optional<Voiture> optionalVoiture = voitureRepository.findById(newVoiture.getId());
 
         if (optionalVoiture.isPresent()) {
             throw new AlreadyExistingException("Voiture " + newVoiture.getId() + " already exists.");

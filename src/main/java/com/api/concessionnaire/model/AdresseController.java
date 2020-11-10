@@ -33,7 +33,7 @@ public class AdresseController {
 
     @PostMapping
     public void createAdresse(@RequestBody Adresse newAdresse) throws AlreadyExistingException {
-        final Optional<Adresse> optionalAdresse = adresseRepository.findAll().stream().filter(adresse -> adresse.getId() == newAdresse.getId()).findFirst();
+        final Optional<Adresse> optionalAdresse = adresseRepository.findById(newAdresse.getId());
 
         if (optionalAdresse.isPresent()) {
             throw new AlreadyExistingException("Adresse "+ newAdresse.getId() +" already exists.");
